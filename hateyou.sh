@@ -32,8 +32,6 @@ https=$(cat save.txt | grep -Po 'https://\K.*?(?=")');
 http=$(cat save.txt | grep -Po 'http://\K.*?(?=")');
 src=$(cat save.txt | grep -Po 'src="\K.*?(?=")');
 action=$(cat save.txt | grep -Po 'action="\K.*?(?=")');
-url=$(cat save.txt | grep -Po 'url\K.*?(?=;)');
-js=$(cat save.txt | grep -Po "'\K.*?(?=' +)");
 
   printf "${white}[+]${site}\n${BlueF}...=Extract From Href Link=...\n${lightgreen}${href}\n${BlueF}...=Extract From Https Link=...\n${lightgreen}${https}\n${BlueF}...=Extract From Http Link=...\n${lightgreen}${http}\n${BlueF}...=Extract From Src Link=...\n${lightgreen}${src}\n${BlueF}...=Extract From action Link=...\n${lightgreen}${action}\n${BlueF}...=Extract From random Link=...\n${lightgreen}${url}\n${BlueF}...=Extract From JavaScript Link=...\n${lightgreen}${js}${white}\n"
   echo "[+]Done.."
